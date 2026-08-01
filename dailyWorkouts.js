@@ -231,14 +231,27 @@ const workoutTypes = {
 
 const vacationWorkouts = {
 
+    morning: [
 
-    workout: [
+        "Stomach Vacuums (15 secs x 10)",
+
+        "90/90 Toe Taps (45 secs)",
+
+        "Dead Bugs (45 secs)",
+
+        "Plank (1 min)"
+
+    ],
+
+    nighttime: [
 
         "25 Pushups",
 
-        "In and outs (45 seconds x2)",
+        "15 Bulgarian Split Squats",
 
-        "Plank (1 minute x2)"
+        "45 Calf Raises",
+
+        "15 Pump Squats"
 
     ]
 
