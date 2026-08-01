@@ -1866,9 +1866,101 @@ onchange="completeWorkout('${item}')"
 `;
 
 
-
 }
 
+else if(userData.mode === "Event"){
+
+
+
+const workout = dailyWorkouts[today];
+
+
+content = `
+
+
+
+<h1>💙 Event Day Workout</h1>
+
+
+<h2>${today}</h2>
+
+
+
+
+<div class="card">
+
+
+<h3>🌅 Morning</h3>
+
+
+<label class="workout-item">
+
+
+<input
+
+type="checkbox"
+
+${userData.completedToday.includes("Event Morning Routine") ? "checked":""}
+
+onchange="completeWorkout('Event Morning Routine')"
+
+>
+
+
+<span>Event Morning Routine</span>
+
+
+</label>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h3>🌙 Night (Optional)</h3>
+
+
+${workout.nighttime.map(item=>`
+
+
+
+<label class="workout-item">
+
+
+<input
+
+type="checkbox"
+
+${userData.completedToday.includes(item) ? "checked":""}
+
+onchange="completeWorkout('${item}')"
+
+
+
+>
+
+
+<span>${item}</span>
+
+
+</label>
+
+
+
+`).join("")}
+
+
+
+</div>
+
+
+
+`;
+}
 
 else{
 
