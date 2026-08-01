@@ -1784,8 +1784,51 @@ content = `
 
 <div class="card">
 
+<h3>🌅 Morning</h3>
 
-${vacationWorkouts.workout.map(item=>`
+
+${vacationWorkouts.morning.map(item=>`
+
+
+
+<label class="workout-item">
+
+
+<input
+
+type="checkbox"
+
+${userData.completedToday.includes(item) ? "checked":""}
+
+onchange="completeWorkout('${item}')"
+
+
+
+>
+
+
+<span>${item}</span>
+
+
+</label>
+
+
+
+`).join("")}
+
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>🌙 Night</h3>
+
+
+${vacationWorkouts.nighttime.map(item=>`
 
 
 
@@ -1825,7 +1868,6 @@ onchange="completeWorkout('${item}')"
 
 
 }
-
 
 
 else{
